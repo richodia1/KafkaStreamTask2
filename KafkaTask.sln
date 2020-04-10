@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StreamProducer", "StreamProducer\StreamProducer.csproj", "{AF9D94CA-083E-491D-B01B-24221905F526}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaTest", "KafkaTest\KafkaTest.csproj", "{75C0FF0F-39EE-42C1-B5F2-F38671352ED7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamConsumer", "StreamConsumer\StreamConsumer.csproj", "{B0EB3718-1AFF-4D4B-ACB1-0FE4605AB000}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cp-all-in-one", "cp-all-in-one", "{6F60A38C-96D0-436E-8527-E6C37B6AB962}"
+	ProjectSection(SolutionItems) = preProject
+		..\cp-all-in-one\docker-compose.yml = ..\cp-all-in-one\docker-compose.yml
+		..\cp-all-in-one\README.md = ..\cp-all-in-one\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF9D94CA-083E-491D-B01B-24221905F526}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF9D94CA-083E-491D-B01B-24221905F526}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF9D94CA-083E-491D-B01B-24221905F526}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF9D94CA-083E-491D-B01B-24221905F526}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75C0FF0F-39EE-42C1-B5F2-F38671352ED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75C0FF0F-39EE-42C1-B5F2-F38671352ED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75C0FF0F-39EE-42C1-B5F2-F38671352ED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75C0FF0F-39EE-42C1-B5F2-F38671352ED7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0EB3718-1AFF-4D4B-ACB1-0FE4605AB000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0EB3718-1AFF-4D4B-ACB1-0FE4605AB000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0EB3718-1AFF-4D4B-ACB1-0FE4605AB000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0EB3718-1AFF-4D4B-ACB1-0FE4605AB000}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF959354-BDAE-47A1-A05D-BFFD2DF04128}
+	EndGlobalSection
+EndGlobal
