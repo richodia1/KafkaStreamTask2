@@ -10,5 +10,7 @@ namespace StreamConsumer.Services.Interfaces
     public interface IConsumerService
     {
         IEnumerable<ConsumerResult> CreateConsumerAndConsume(ConsumerConfig consumerConfig, string topic, CancellationToken cts);
+
+        ConsumerResult CreateConsumerAndConsumeSingleMessage(ConsumerConfig consumerConfig, string topic, CancellationToken cts);
     }
 }

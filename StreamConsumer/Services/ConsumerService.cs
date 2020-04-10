@@ -13,7 +13,6 @@ namespace StreamConsumer.Services
         public IEnumerable<ConsumerResult> CreateConsumerAndConsume(ConsumerConfig consumerConfig, string topic, CancellationToken cts)
         {
             var result = new List<ConsumerResult>();
-
             var cb = new ConsumerBuilder<string, string>(consumerConfig);
             using (var consumer = cb.Build())
             {
@@ -26,6 +25,31 @@ namespace StreamConsumer.Services
                         var offset = cr.TopicPartitionOffset;
                         result.Add(new ConsumerResult { Message = cr.Message.Value, TopicOffset = offset });
                     }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    consumer.Close();
+                }
+            }
+
+            return result;
+        }
+
+        //For integration test purpose.
+        public ConsumerResult CreateConsumerAndConsumeSingleMessage(ConsumerConfig consumerConfig, string topic, CancellationToken cts)
+        {
+            ConsumerResult result = null;
+
+            var cb = new ConsumerBuilder<string, string>(consumerConfig);
+            using (var consumer = cb.Build())
+            {
+                consumer.Subscribe(topic);
+                try
+                {
+                    var cr = consumer.Consume(cts);
+                    var offset = cr.TopicPartitionOffset;
+                    result = new ConsumerResult { Message = cr.Message.Value, TopicOffset = offset };
                 }
                 catch (Exception e)
                 {
